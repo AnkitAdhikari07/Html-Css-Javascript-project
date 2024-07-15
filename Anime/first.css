@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ----------------------------Navbar & sidebar------------------ */
+
+.navbar{
+    width: 100%;
+    height: 50px;
+     background-color: black;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+    height: 100%;
+    color: white;
+    font-family: 'Sen', sans-serif;
+
+}
+
+.logo-container{
+    flex: 1;
+}
+
+.logo{
+    font-size: 25px;
+    position: relative;
+    left: 30px;
+    color: green;
+}
+
+.menu-container{
+    flex: 6;
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item{
+    margin: 30px;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0px 15px;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.8s ease all;
+}
+
+.sidebar{
+    width: 80px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* --------------------------------------------navbar and sidebar end here ------------------------------------ */
+
+
+.container{
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+}
+
+.content-container{
+    margin-left: 80px;
+}
+
+.featured-content{
+    height: 50vh;
+    padding: 50px;
+}
+
+.title-name{
+    font-size: 50px;
+}
+.featured-title{
+    width: 200px;
+}
+
+.featured-desc{
+    width: 500px;
+    color: lightgray;
+    margin: 15px 0;
+}
+
+.featured-button{
+    background-color: rgb(83, 245, 83);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.featured-button:hover{
+    background-color: red;
+}
+/* ------------------------Movie List------------------------ */
+
+.anime-list-container{
+    padding: 20px;
+}
+
+.anime-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.anime-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.anime-list-item{
+    margin-right: 30px;
+    position: relative;
+}
+
+.anime-list-item:hover .anime-list-item-img{
+    transform: scale(1.2);
+    margin: 0px 30px;
+    opacity: 0.3;
+}
+
+.anime-list-item-img{
+    width: 270px;
+    height: 200px;
+    /* object-fit: cover; */
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.anime-list-item-title{
+    /* background-color: rgb(34, 33, 33); */
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.anime-list-item-desc{
+    /* background-color: rgb(34, 33, 33); */
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+
+}
+
+.anime-list-item-button{
+    padding: 10px;
+    background-color: rgb(83, 245, 83);
+    color: white;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+
+}
+
+.anime-list-item-button:hover{
+    background-color: red;
+    font-weight: bold;
+}
+
+.anime-list-item:hover .anime-list-item-title,
+.anime-list-item:hover .anime-list-item-desc,
+.anime-list-item:hover .anime-list-item-button{
+    opacity: 1;
+}
+
+.arrow{
+    font-size: 100px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: gray;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.arrow:hover{
+    color: rgb(240, 239, 239);
+    opacity: 0.7;
+}
+
+/* ------------------------------------ */
+.container.active{
+    background-color: white;
+}
+
+.anime-list-title.active{
+    color: black;
+}
+
+.anime-list-item-title.active{
+    color: black;
+}
+
+.anime-list-item-desc.active{
+    color: black;
+}
+
+.navbar.active{
+    background-color: white;
+}
+
+.navbar-container.active{
+    color: black;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+}
